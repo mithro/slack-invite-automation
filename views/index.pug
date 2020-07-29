@@ -10,6 +10,7 @@ html
     #wrapper
       .main
         .header
+          img(src="images/logo.png")
           h1
             strong #{community}
           h2 #{__('HEADER', community)}
@@ -19,7 +20,7 @@ html
               input(type="email", name="email", autofocus, placeholder=__('ENTER_EMAIL'))#slack-email.field
               if tokenRequired
                 input(type="text", name="token", placeholder=__('ENTER_TOKEN'))#slack-token.field
-              input(type="submit", value="Join").submit
+              input(type="submit", value="Get invite").submit
               if !!recaptchaSiteKey
                 div(class="g-recaptcha", data-sitekey=recaptchaSiteKey)
     if !!recaptchaSiteKey
